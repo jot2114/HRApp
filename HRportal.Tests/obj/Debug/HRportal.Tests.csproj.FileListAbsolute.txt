@@ -1,0 +1,5 @@
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Tests\bin\Debug\HRportal.Tests.dll
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Tests\bin\Debug\HRportal.Tests.pdb
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Tests\obj\Debug\HRportal.Tests.csprojResolveAssemblyReference.cache
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Tests\obj\Debug\HRportal.Tests.dll
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Tests\obj\Debug\HRportal.Tests.pdb

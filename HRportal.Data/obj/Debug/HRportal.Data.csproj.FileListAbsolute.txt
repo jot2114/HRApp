@@ -1,0 +1,7 @@
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\bin\Debug\HRportal.Data.dll
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\bin\Debug\HRportal.Data.pdb
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\bin\Debug\HRportal.Models.dll
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\bin\Debug\HRportal.Models.pdb
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\obj\Debug\HRportal.Data.csprojResolveAssemblyReference.cache
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\obj\Debug\HRportal.Data.dll
+c:\Users\apprentice\documents\visual studio 2015\Projects\HRportal\HRportal.Data\obj\Debug\HRportal.Data.pdb

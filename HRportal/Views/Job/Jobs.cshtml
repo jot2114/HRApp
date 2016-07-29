@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Jobs";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        @Html.ActionLink("Add Job", "AddJob", "Job", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-xs-10">
+            <table class="table">
+                @foreach (var job in Model)
+                {
+                    <tr>
+                        <td>
+                            <ul class="jobList">
+                                <li>
+                                    <p>
+                                        <b>Job Title: @job.JobPosition</b>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Job Description: @job.JobDescription</b>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Job Requirements: @job.JobRequirements</b>
+                                    </p>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "EditJob", "Job", new { id = job.JobId }, new { @class = "btn btn-info", id = "applyButton" })
+                            @Html.ActionLink("Delete","DeleteJob","Job",new {id = job.JobId}, new {@class = "btn-btn-info",id =""})
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+﻿@model HRportal.Models.Job
+@{
+    ViewBag.Title = "AddJob";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Add A Job</h4>
+        @Html.ActionLink("Return To List", "Jobs", "Job")
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <label class="control-label col-md-4">Job Position:</label>
+                @Html.TextBoxFor(m => m.JobPosition, new { @class = "form-control"})
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Job Description:</label>
+                @Html.TextAreaFor(m => m.JobDescription, new { @class = "form-control"})
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Job Requiremnets:</label>
+                @Html.TextAreaFor(m => m.JobRequirements, new { @class = "form-control"})
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+        }
+    </div>
+</div>
+
+
+

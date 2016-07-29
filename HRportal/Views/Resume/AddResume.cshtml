@@ -1,0 +1,90 @@
+﻿@model HRportal.Models.Resume
+@{
+    ViewBag.Title = "AddResume";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Please fill the following information for @Model.JobApplyingFor.JobPosition</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6">
+        @using (Html.BeginForm("AddResume", "Resume", null, FormMethod.Post, new { id = "resumeForm" }))
+        {
+            @Html.HiddenFor(j => j.JobApplyingFor.JobId)
+
+            <div id="Personal Details" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">Name:</label>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">Address:</label>
+                    @Html.TextBoxFor(m => m.Address.Street, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Address.Street)
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">Phone number:</label>
+                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.PhoneNumber)
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">Email id:</label>
+                    @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.EmailId)
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">DOB:</label>
+                    @Html.TextBoxFor(m => m.Dob, new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(m => m.Dob)
+                </div>
+
+                <div></div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">Education:</label>
+                    @Html.TextBoxFor(m => m.education, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.education)
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">Company Name</label>
+                    @Html.TextBoxFor(m => m.workHistory.CompanyName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.workHistory.CompanyName)
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">Experience</label>
+                    @Html.TextBoxFor(m => m.workHistory.Years, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.workHistory.Years)
+                </div>
+
+                <div class="form-horizontal">
+                    <input type="submit" class="btn btn-success" value="Submit My Resume" id="sendResume" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    @*<script type="text/javascript">
+                $(document)
+                    .ready(function() {
+                        $("form")
+                            .on("submit",
+                                function(e) {
+                                    alert("Off we go!");
+                                });
+                    });
+        </script>*@
+    @*<script src="~/scripts/app/resumeValidation.js"></script>*@
+}

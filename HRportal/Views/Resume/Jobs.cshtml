@@ -1,0 +1,43 @@
+﻿@model List<HRportal.Models.Job>
+@{
+    ViewBag.Title = "Jobs";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Current Job Openings</h3>
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-xs-10">
+            <table class="table">
+                @foreach (var job in Model)
+                {
+                    <tr>
+                        <td>
+                            <ul class="jobList">
+                                <li>
+                                    <p><b>Job Title: @job.JobPosition</b>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Job Description: @job.JobDescription</b>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Job Requirements: @job.JobRequirements</b>
+                                    </p>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            @Html.ActionLink("Apply Now","AddResume","Resume",new {id=job.JobId},new {@class="btn ",id="applyButton"})
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
